@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         )}
      </>
-     <div className="d-flex m-3 flex-wrap ">
+     <div className="d-flex m-3 flex-wrap">
         {list && list.length>0 && list.map(function(element,index){
             return <Card data={[element,handleDelete]} key={index} />
           })
