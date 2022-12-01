@@ -1,12 +1,8 @@
 
 const fetchTodosList=async()=>{
   try {
-    const response=await fetch('/todo',{
-      method:'GET',
-      headers:{
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      }
+    const response=await fetch('https://arun-todo-node.onrender.com/api/v1/todo',{
+      method:'GET'
      });
      return response.json();
   } catch (error) {
@@ -17,7 +13,7 @@ const fetchTodosList=async()=>{
 
 const submitTodo=async(details)=>{
   try {
-    const response=await fetch('/todo',{
+    const response=await fetch('https://arun-todo-node.onrender.com/api/v1/todo',{
     method:'POST',
     headers:{
       'Accept':'application/json',
@@ -34,7 +30,7 @@ const submitTodo=async(details)=>{
 
 const deleteTodo=async (id)=>{
   try {
-    const response=await fetch(`/todo/${id}`,{
+    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
     method:'DELETE'
    });
    return response.json();
@@ -47,7 +43,7 @@ const deleteTodo=async (id)=>{
 const updateTodo=async (id,details)=>{
   console.log(details)
   try {
-    const response=await fetch(`/todo/${id}`,{
+    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
     method:'PUT',
     headers:{
       'Accept':'application/json',
@@ -64,7 +60,7 @@ const updateTodo=async (id,details)=>{
 
 const getTodo=async(id)=>{
   try {
-    const response=await fetch(`/todo/${id}`,{
+    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
       method:'GET'
      });
      return response.json();
@@ -76,7 +72,7 @@ const getTodo=async(id)=>{
 
 const searchTodos=async(key)=>{
   try {
-    const response=await fetch(`/todo/search/${key}`,{
+    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/search/${key}`,{
       method:'GET'
      });
      return response.json();
