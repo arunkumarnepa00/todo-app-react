@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../common/Navbar";
 import {fetchTodosList,searchTodos} from "../apihelper/apicalls";
 import Card from "../common/Card";
+import Footer from "../common/Footer";
 
 
 export default function Home() {
@@ -91,6 +92,7 @@ export default function Home() {
           })
         }
      </div>
+     {list && (<Footer/>)}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { submitTodo,updateTodo } from "../apihelper/apicalls";
+import './styles/Form.css';
 
 export default function Form(props) {
   const updateItem=props.data;
@@ -67,7 +68,7 @@ export default function Form(props) {
 
 
   return (
-    <div style={{ width: "40rem" }}>
+    <div className="todoform">
       { err && (
         <div className="card bg-danger mx-5 mt-2">
           <div className="card-body text-white">
@@ -97,7 +98,7 @@ export default function Form(props) {
         </div>)
       }
   
-      <form className="m-5 px-5">
+      <form className="m-5">
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Title</label>
           <input className="form-control" id="title" 

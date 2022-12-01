@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import Navbar from '../common/Navbar';
 import Form from '../common/Form';
 import {getTodo} from "../apihelper/apicalls";
-
+import Footer from '../common/Footer';
 
 export default function UpdateTodo() {
   const {id}=useParams();
@@ -39,6 +39,7 @@ export default function UpdateTodo() {
         </div>)
       }
       <Form data={list}/>
+      <Footer/>
     </>
   );
 }
