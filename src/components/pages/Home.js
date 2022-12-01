@@ -92,7 +92,7 @@ export default function Home() {
           })
         }
      </div>
-     {list && (<Footer/>)}
+     {list && (<div className="position-relative mt-5 pt-5"><Footer/></div>)}
     </div>
   );
 }
