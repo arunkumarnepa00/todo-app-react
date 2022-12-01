@@ -35,7 +35,7 @@ export default function Home() {
     const getTodos = async () => {
       try {
         const data = await fetchTodosList();
-        if (data.err) {
+        if (data && data.err) {
           setErr(data.err);
         } else {
           setList(data.items);

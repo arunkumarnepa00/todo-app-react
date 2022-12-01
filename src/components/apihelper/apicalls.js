@@ -2,14 +2,17 @@
 const fetchTodosList=async()=>{
   try {
     const response=await fetch('/todo',{
-      method:'GET'
+      method:'GET',
+      headers:{
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
      });
      return response.json();
   } catch (error) {
     console.log(error)
     return {err:error};
   }
-
 }
 
 const submitTodo=async(details)=>{
