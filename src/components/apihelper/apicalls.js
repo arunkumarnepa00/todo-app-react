@@ -1,7 +1,8 @@
+const {API}=require('../../backend');
 
 const fetchTodosList=async()=>{
   try {
-    const response=await fetch('https://arun-todo-node.onrender.com/api/v1/todo',{
+    const response=await fetch(`${API}/todo`,{
       method:'GET'
      });
      return response.json();
@@ -13,7 +14,7 @@ const fetchTodosList=async()=>{
 
 const submitTodo=async(details)=>{
   try {
-    const response=await fetch('https://arun-todo-node.onrender.com/api/v1/todo',{
+    const response=await fetch(`${API}/todo`,{
     method:'POST',
     headers:{
       'Accept':'application/json',
@@ -30,7 +31,7 @@ const submitTodo=async(details)=>{
 
 const deleteTodo=async (id)=>{
   try {
-    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
+    const response=await fetch(`${API}/todo/${id}`,{
     method:'DELETE'
    });
    return response.json();
@@ -43,7 +44,7 @@ const deleteTodo=async (id)=>{
 const updateTodo=async (id,details)=>{
   console.log(details)
   try {
-    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
+    const response=await fetch(`${API}/todo/${id}`,{
     method:'PUT',
     headers:{
       'Accept':'application/json',
@@ -60,7 +61,7 @@ const updateTodo=async (id,details)=>{
 
 const getTodo=async(id)=>{
   try {
-    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/${id}`,{
+    const response=await fetch(`${API}/todo/${id}`,{
       method:'GET'
      });
      return response.json();
@@ -72,7 +73,7 @@ const getTodo=async(id)=>{
 
 const searchTodos=async(key)=>{
   try {
-    const response=await fetch(`https://arun-todo-node.onrender.com/api/v1/todo/search/${key}`,{
+    const response=await fetch(`${API}/todo/search/${key}`,{
       method:'GET'
      });
      return response.json();
